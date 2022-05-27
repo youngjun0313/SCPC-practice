@@ -1,12 +1,12 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.StringTokenizer;
 
 class SCPC139 {
     static String Answer;
 
-    public static void main(String args[]) throws Exception {
+    public static void main(String args[]) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int T = Integer.parseInt(br.readLine());
         for (int test_case = 0; test_case < T; test_case++) {
@@ -42,8 +42,10 @@ class SCPC139 {
 
             Answer = String.valueOf(tempAns);
 
-            System.out.println("Case #" + (test_case + 1));
-            System.out.println(Answer);
+            bw.write("Case #" + (test_case + 1)+"\n");
+            bw.write(Answer+"\n");
         }
+        bw.flush();
+        bw.close();
     }
 }
