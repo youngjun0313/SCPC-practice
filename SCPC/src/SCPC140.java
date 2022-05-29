@@ -53,8 +53,9 @@ class SCPC140 {
                     directedMap.put(dst, updatedValue);
 
                     sb.append("1");
-                } else
+                } else {
                     sb.append("0");
+                }
             }
 
             Answer = sb.toString();
